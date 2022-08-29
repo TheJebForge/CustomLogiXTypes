@@ -1,6 +1,6 @@
 # Custom LogiX Types
 
-A [NeosModLoader](https://github.com/zkxs/NeosModLoader) mod for [Neos VR](https://neos.com/) that adds a convenient way to add custom types into LogiX browser, so you don't have to do it manually through an inspector
+A [NeosModLoader](https://github.com/zkxs/NeosModLoader) mod for [Neos VR](https://neos.com/) that adds a convenient way to use advanced LogiX types, so you don't have to do it manually through an inspector
 
 ![image](screenshot/panel.png)
 
