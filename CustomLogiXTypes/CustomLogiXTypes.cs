@@ -16,7 +16,7 @@ namespace CustomLogiXTypes
     {
         public override string Name => "CustomLogiXTypes";
         public override string Author => "TheJebForge";
-        public override string Version => "1.0.0";
+        public override string Version => "1.0.1";
 
         static ModConfiguration _config;
 
@@ -63,7 +63,9 @@ namespace CustomLogiXTypes
             foreach (string typeStr in _customTypes[fileName]) {
                 Type type = TypeHelper.TryResolveAlias(typeStr) ?? WorkerManager.GetType(typeStr);
                 
-                if(type == null) continue;
+                if (type == null) continue;
+                if (type.GenericTypeArguments.Length <= 0) continue;
+                if (!typeof(LogixNode).IsAssignableFrom(type)) continue;
 
                 Slot inside = ui.Empty("CustomType");
                 ui.NestInto(inside);
